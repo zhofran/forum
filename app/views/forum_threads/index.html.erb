@@ -1,0 +1,27 @@
+<div class="row">
+	<div class="col-md-5 col-md-offset-3">
+		<%= link_to "Buat Diskusi", new_forum_thread_path, class: 'btn btn-primary' %>
+		
+		<% @thread.each do |z| %>
+			<div class="thread">
+				<h4><%= link_to z.title.titleize, forum_thread_path(z) %></h4>
+				
+				<div class="meta">
+					<%= I18n.l(z.created_at.to_date) %> oleh <%= z.user.name %>
+				</div>
+
+				<div class="content">
+					<p>
+						<%= z.content %>
+					</p>
+				</div>
+
+				<div class="count">
+					<%= z.forum_posts.count %> Obrolan
+				</div>
+
+				<div style="clear: both;"></div>
+			</div>
+		<% end %>
+	</div>
+</div>

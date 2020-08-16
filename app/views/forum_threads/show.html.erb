@@ -1,0 +1,41 @@
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<div class="thread">
+			<h4><%= @thread.title.titleize %></h4>
+			<div class="meta">
+				<%= I18n.l(@thread.created_at.to_date) %> oleh <%= @thread.user.name %>
+			</div>
+			<div class="content">
+				<%= @thread.content %>
+			</div>
+		</div>
+
+		<% if @thread.forum_posts.any? %>
+			<% @thread.forum_posts.each do |c| %>
+				<div class="thread">
+					<div class="meta">
+						<%= I18n.l(c.created_at.to_date) %> oleh <%= c.user.name %>
+					</div>
+					<div class="content">
+						<%= c.content %>
+					</div>
+				</div>			
+			<% end %>
+		<% else %>
+			<div align="center">
+				<h4>jadilah yang pertama mengomentari</h4>
+			</div>
+		<% end %>
+
+		<% form_for [@thread, @post] do |p| %>
+			<div class="form-group">
+				<%= p.label :content %></br>
+				<%= p.text_area :content, rows: 10, class: 'form_control' %></br>
+			</div>
+
+			<div class="form-group">
+				<%= p.submit "Kirim", class: 'btn btn-success' %>
+			</div>
+		<% end %>
+	</div>
+</div>
