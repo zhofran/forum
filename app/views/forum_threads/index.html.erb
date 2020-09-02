@@ -5,7 +5,8 @@
 		<% end %>
 		<% @threads.each do |z| %>
 			<div class="thread">
-				<h4><%= link_to z.title.titleize, forum_thread_path(z) %>
+				<h4>
+					<%= link_to z.title.titleize, forum_thread_path(z) %>
 					<% if z.sticky %>
 						<i class="fas fa-map-pin" style="transform: rotate(45deg);"></i>
 					<% end %>

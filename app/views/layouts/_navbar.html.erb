@@ -5,14 +5,14 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <%= form_tag root_path, method: :get, class: 'form-inline my-2 my-lg-0' do %>
+    <%= form_tag root_path, method: :get, class: 'form-inline my-2 my-lg-0', style: 'float : left' do %>
       <div class="form-group">
         <%= text_field_tag :search, nil, class: 'form-control mr-sm-2' %>
       </div>
       <%= submit_tag "Cari", class: 'btn btn-outline-success my-2 my-sm-0' %>
     <% end %>
 
-    <ul class="navbar-nav" style="margin-left: 954px">
+    <ul class="navbar-nav" style="float: right;">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle"href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= user_signed_in? ? current_user.name : 'Hello Guest' %></a>
         <div class="dropdown-menu" style="float: right;" aria-labelledby="navbarDropdown" >
