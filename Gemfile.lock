@@ -89,6 +89,10 @@ GEM
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.13.1)
+    font-awesome-sass (5.13.0)
+      sassc (>= 1.11)
+    friendly_id (5.4.0)
+      activerecord (>= 4.0.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.8.5)
@@ -123,6 +127,8 @@ GEM
     public_suffix (4.0.5)
     puma (4.3.5)
       nio4r (~> 2.0)
+    pundit (2.1.0)
+      activesupport (>= 3.0.0)
     rack (2.2.3)
     rack-proxy (0.6.5)
       rack
@@ -213,6 +219,9 @@ GEM
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    will_paginate (3.3.0)
+    will_paginate-bootstrap4 (0.2.2)
+      will_paginate (~> 3.0, >= 3.0.0)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.4.0)
@@ -226,11 +235,14 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise
+  font-awesome-sass (~> 5.13.0)
+  friendly_id
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
+  pundit
   rails (~> 6.0.3, >= 6.0.3.2)
   sass-rails (>= 6)
   selenium-webdriver
@@ -241,6 +253,8 @@ DEPENDENCIES
   web-console (>= 3.3.0)
   webdrivers
   webpacker (~> 4.0)
+  will_paginate
+  will_paginate-bootstrap4
 
 RUBY VERSION
    ruby 2.7.1p83

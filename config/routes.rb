@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root "forum_threads#index"
 
-  resources :forum_threads, only: [:show, :new, :create] do
-  	resources :forum_posts, only: [:create]
+  resources :forum_threads do
+  	put :pinkuy, on: :member
+  	resources :forum_posts
   end
 end

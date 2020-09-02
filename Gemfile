@@ -6,6 +6,9 @@ ruby '2.7.1'
 #Bootstrap'
 gem 'bootstrap-sass'
 
+#FontAwesome
+gem 'font-awesome-sass', '~> 5.13.0'
+
 #JavaScript
 gem 'jquery-rails'
 
@@ -25,6 +28,14 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 
 gem 'devise'
+
+gem 'pundit'
+
+gem 'friendly_id'
+
+gem 'will_paginate'
+
+gem 'will_paginate-bootstrap4'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
